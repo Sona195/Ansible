@@ -1,0 +1,4 @@
+---
+- name: Generate configuration files
+  template: src=Switch.j2 dest=/mnt/c/Users/Sona/Desktop/NETW3100-Lab04/Configs{{item.hostname}}.ios  
+  with_items: "{{Switches}}"
