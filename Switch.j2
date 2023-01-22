@@ -1,0 +1,30 @@
+!
+en
+!
+vlan database
+vlan 10 name SIA
+vlan 20 name TIA
+vlan 30 name AIT
+vlan 40 name SAM
+exit
+!
+!
+hostname {{ item.hostname }}
+{% for interface in item.interfaces %}
+interface {{ interface.name }}
+  switchport mode {{ interface.type }}
+  description {{ interface.description }}
+  {% if interface.type == "trunk" %}
+switchport trunk encap dot1q
+  {% else %}
+switchport access vlan {{ interface.vlan }}
+  {{ interface.status }}
+  {% endif %}
+
+{% endfor %}
+!
+!
+!
+!
+!
+!
