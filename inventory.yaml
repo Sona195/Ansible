@@ -1,6 +1,6 @@
 Switches:
 
-  - hostname: Switch1
+  - hostname: R1
     hostIP: 192.168.1.10
     interfaces:
     - name: GigabitEthernet0/1
@@ -14,59 +14,5 @@ Switches:
 
 
 
-  - hostname: Switch2
-    hostIP: 10.1.10.20
-    interfaces:
-    - name: GigabitEthernet0/1
-      type: trunk
-      status: no shutdown
-      description: Connected to Switch1
-
-    - name: GigabitEthernet0/2
-      type: trunk
-      status: no shutdown
-      description: Connected to Switch4
-
-    
-
-  - hostname: Switch3
-    hostIP: 10.1.10.30
-    interfaces:
-    - name: GigabitEthernet0/3
-      type: trunk
-      status: no shutdown
-      description: Connected to Switch5
-
-    - name: GigabitEthernet0/3
-      type: trunk
-      status: no shutdown
-      description: Connected to Switch1 
-
-
-  - hostname: Switch4
-    hostIP: 10.1.10.40
-    interfaces:
-    - name: GigabitEthernet0/1
-      type: trunk
-      status: no shutdown
-      description: Connected to Switch5
-
-    - name: GigabitEthernet0/2
-      type: trunk
-      status: no shutdown
-      description: Connected to Switch2
-
-
-  - hostname: Switch5
-    hostIP: 10.1.10.50
-    interfaces:
-    - name: GigabitEthernet0/1
-      type: trunk
-      status: no shutdown
-      description: Connected to Switch4
-
-    - name: GigabitEthernet0/3
-      type: trunk
-      status: no shutdown
-      description: Connected to Switch3 
+ 
  
